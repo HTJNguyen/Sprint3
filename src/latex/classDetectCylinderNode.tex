@@ -20,6 +20,183 @@ Collaboration diagram for Detect\+Cylinder\+Node\+:
 \includegraphics[width=195pt]{classDetectCylinderNode__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDetectCylinderNode_ab18199cbf2962ce09cbab35ee13e709b}{laser\+Callback}} (const sensor\+\_\+msgs\+::msg\+::\+Laser\+Scan\+::\+Shared\+Ptr scan)
+\begin{DoxyCompactList}\small\item\em Callback function for the Laser\+Scan subscriber. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDetectCylinderNode_a73039b036b748bbb994a57251cf5820c}{odom\+Callback}} (const nav\+\_\+msgs\+::msg\+::\+Odometry\+::\+Shared\+Ptr odom)
+\begin{DoxyCompactList}\small\item\em Callback function for the Odometry subscriber. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDetectCylinderNode_a20af681202ec12cadd6aae7e4c596a4b}{filter\+Scan}} ()
+\item 
+void \mbox{\hyperlink{classDetectCylinderNode_a9fcda8323b5d6c402ec00ab78d39b07f}{detect\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Look through the valid points for valid objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDetectCylinderNode_aafaec9f30263005411ca721fbcb8bbe5}{detect\+Cylinder}} ()
+\begin{DoxyCompactList}\small\item\em Detects the Cylinder from the vector of found objects. \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::msg\+::\+Point \mbox{\hyperlink{classDetectCylinderNode_a3cb053b4f23cc48d8ef64386558195a3}{polar\+To\+Cartesian}} (double range, double yaw)
+\begin{DoxyCompactList}\small\item\em Convert the polar coordinates to cartesian coordinates. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classDetectCylinderNode_adacdf43f4c7ef6beeecb0061fab13fd6}{get\+Yaw\+From\+Pose}} (const geometry\+\_\+msgs\+::msg\+::\+Pose \&pose)
+\begin{DoxyCompactList}\small\item\em Gets the Yaw from the Pose of the robot. \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::msg\+::\+Pose \mbox{\hyperlink{classDetectCylinderNode_ac69c5311f7635136b9ca6eeb3f7e1592}{get\+Odometry}} ()
+\begin{DoxyCompactList}\small\item\em Gets the Odometry from the locally stored variable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDetectCylinderNode_af22ee1842019af06decaa8ff30db6525}\label{classDetectCylinderNode_af22ee1842019af06decaa8ff30db6525}} 
+void {\bfseries publish\+Cylinder\+Marker} ()
+\item 
+\mbox{\Hypertarget{classDetectCylinderNode_a511726c566ac9a8150f221a7ecf333a3}\label{classDetectCylinderNode_a511726c566ac9a8150f221a7ecf333a3}} 
+void {\bfseries publish\+Detection\+Marker} (float detected\+\_\+x, float detected\+\_\+y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDetectCylinderNode_a77017dca8645b36e8b8837bc46c2078a}\label{classDetectCylinderNode_a77017dca8645b36e8b8837bc46c2078a}} 
+rclcpp\+::\+Subscription$<$ sensor\+\_\+msgs\+::msg\+::\+Laser\+Scan $>$\+::Shared\+Ptr \mbox{\hyperlink{classDetectCylinderNode_a77017dca8645b36e8b8837bc46c2078a}{laser\+\_\+sub\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Laser\+Scan subscriber. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDetectCylinderNode_a70c71df9be1f7bcbb49bb87242e39102}\label{classDetectCylinderNode_a70c71df9be1f7bcbb49bb87242e39102}} 
+rclcpp\+::\+Subscription$<$ nav\+\_\+msgs\+::msg\+::\+Odometry $>$\+::Shared\+Ptr \mbox{\hyperlink{classDetectCylinderNode_a70c71df9be1f7bcbb49bb87242e39102}{odom\+\_\+sub\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Odometry subscriber. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDetectCylinderNode_a641b7870712aa15dd3b9cbc6cba5e940}\label{classDetectCylinderNode_a641b7870712aa15dd3b9cbc6cba5e940}} 
+rclcpp\+::\+Publisher$<$ visualization\+\_\+msgs\+::msg\+::\+Marker $>$\+::Shared\+Ptr \mbox{\hyperlink{classDetectCylinderNode_a641b7870712aa15dd3b9cbc6cba5e940}{cylinder\+\_\+pub\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Cylinder marker publisher. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDetectCylinderNode_a747ea5ea744566aa44a51ea854876a8f}\label{classDetectCylinderNode_a747ea5ea744566aa44a51ea854876a8f}} 
+rclcpp\+::\+Publisher$<$ visualization\+\_\+msgs\+::msg\+::\+Marker $>$\+::Shared\+Ptr \mbox{\hyperlink{classDetectCylinderNode_a747ea5ea744566aa44a51ea854876a8f}{detection\+\_\+pub\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Detection marker publisher. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDetectCylinderNode_abc918dffc76451766ad2a42014a008dd}\label{classDetectCylinderNode_abc918dffc76451766ad2a42014a008dd}} 
+sensor\+\_\+msgs\+::msg\+::\+Laser\+Scan \mbox{\hyperlink{classDetectCylinderNode_abc918dffc76451766ad2a42014a008dd}{laser\+Scan\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{[}sensor\+\_\+msgs\+::msg\+::\+Laser\+Scan\mbox{]} Local copy of laserscan. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDetectCylinderNode_a9a4217c169f318a88014bec1df1067d3}\label{classDetectCylinderNode_a9a4217c169f318a88014bec1df1067d3}} 
+geometry\+\_\+msgs\+::msg\+::\+Pose \mbox{\hyperlink{classDetectCylinderNode_a9a4217c169f318a88014bec1df1067d3}{odometry\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{[}geometry\+\_\+msgs\+::msg\+::\+Pose\mbox{]} Local copy of Odometry. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDetectCylinderNode_abaa98c93d4a9656cd768ed54585ba702}\label{classDetectCylinderNode_abaa98c93d4a9656cd768ed54585ba702}} 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classDetectCylinderNode_abaa98c93d4a9656cd768ed54585ba702}{valid\+Ranges\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{[}std\+::vector$<$float$>$\mbox{]} A vector of valid ranges from the scan data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDetectCylinderNode_af6e7d8865bc2915282fb48a5073d221c}\label{classDetectCylinderNode_af6e7d8865bc2915282fb48a5073d221c}} 
+std\+::vector$<$ std\+::vector$<$ geometry\+\_\+msgs\+::msg\+::\+Point $>$ $>$ {\bfseries detected\+Objects\+\_\+}
+\item 
+\mbox{\Hypertarget{classDetectCylinderNode_a1fdcb12d2d82787ba6298a09847dc6d0}\label{classDetectCylinderNode_a1fdcb12d2d82787ba6298a09847dc6d0}} 
+bool \mbox{\hyperlink{classDetectCylinderNode_a1fdcb12d2d82787ba6298a09847dc6d0}{recieved\+Odometry\+\_\+}} = false
+\begin{DoxyCompactList}\small\item\em \mbox{[}bool\mbox{]} Indicates if the odometry information has been recieved. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDetectCylinderNode_a6b934a717a4264fa86f7319a9a021281}\label{classDetectCylinderNode_a6b934a717a4264fa86f7319a9a021281}} 
+bool \mbox{\hyperlink{classDetectCylinderNode_a6b934a717a4264fa86f7319a9a021281}{cylinder\+Detected\+\_\+}} = false
+\begin{DoxyCompactList}\small\item\em \mbox{[}bool\mbox{]} Indicates if the cylinder has been detected. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDetectCylinderNode_adee1d97900cef1e49f3e400659063cbe}\label{classDetectCylinderNode_adee1d97900cef1e49f3e400659063cbe}} 
+float {\bfseries cylinder\+Radius\+\_\+}
+\item 
+\mbox{\Hypertarget{classDetectCylinderNode_a30b455fc7fe721d65eff37481b70701e}\label{classDetectCylinderNode_a30b455fc7fe721d65eff37481b70701e}} 
+geometry\+\_\+msgs\+::msg\+::\+Point {\bfseries cylinder\+Position\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDetectCylinderNode_aafaec9f30263005411ca721fbcb8bbe5}\label{classDetectCylinderNode_aafaec9f30263005411ca721fbcb8bbe5}} 
+\index{DetectCylinderNode@{DetectCylinderNode}!detectCylinder@{detectCylinder}}
+\index{detectCylinder@{detectCylinder}!DetectCylinderNode@{DetectCylinderNode}}
+\doxysubsubsection{\texorpdfstring{detectCylinder()}{detectCylinder()}}
+{\footnotesize\ttfamily void Detect\+Cylinder\+Node\+::detect\+Cylinder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Detects the Cylinder from the vector of found objects. 
+
+Tolerances for what is considered a cylinder are set by the user. (Magic numbers). \mbox{\Hypertarget{classDetectCylinderNode_a9fcda8323b5d6c402ec00ab78d39b07f}\label{classDetectCylinderNode_a9fcda8323b5d6c402ec00ab78d39b07f}} 
+\index{DetectCylinderNode@{DetectCylinderNode}!detectObjects@{detectObjects}}
+\index{detectObjects@{detectObjects}!DetectCylinderNode@{DetectCylinderNode}}
+\doxysubsubsection{\texorpdfstring{detectObjects()}{detectObjects()}}
+{\footnotesize\ttfamily void Detect\+Cylinder\+Node\+::detect\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Look through the valid points for valid objects. 
+
+Valid objects are a set of points that are connected with a distance within the tolerance range. $<$ Converted yaw from provided pose.
+
+$<$ Points that make up objects which may be the cylinder.\mbox{\Hypertarget{classDetectCylinderNode_a20af681202ec12cadd6aae7e4c596a4b}\label{classDetectCylinderNode_a20af681202ec12cadd6aae7e4c596a4b}} 
+\index{DetectCylinderNode@{DetectCylinderNode}!filterScan@{filterScan}}
+\index{filterScan@{filterScan}!DetectCylinderNode@{DetectCylinderNode}}
+\doxysubsubsection{\texorpdfstring{filterScan()}{filterScan()}}
+{\footnotesize\ttfamily void Detect\+Cylinder\+Node\+::filter\+Scan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Filter the scan. It should\+:
+\begin{DoxyItemize}
+\item Be Finite.
+\item Be a number.
+\item Be less than the max range amount.
+\item Be greater than the min range amount.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+Valid points in the valid\+Ranges\+\_\+ vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDetectCylinderNode_ac69c5311f7635136b9ca6eeb3f7e1592}\label{classDetectCylinderNode_ac69c5311f7635136b9ca6eeb3f7e1592}} 
+\index{DetectCylinderNode@{DetectCylinderNode}!getOdometry@{getOdometry}}
+\index{getOdometry@{getOdometry}!DetectCylinderNode@{DetectCylinderNode}}
+\doxysubsubsection{\texorpdfstring{getOdometry()}{getOdometry()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::msg\+::\+Pose Detect\+Cylinder\+Node\+::get\+Odometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Gets the Odometry from the locally stored variable. 
+
+\begin{DoxyReturn}{Returns}
+Odometry 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDetectCylinderNode_adacdf43f4c7ef6beeecb0061fab13fd6}\label{classDetectCylinderNode_adacdf43f4c7ef6beeecb0061fab13fd6}} 
+\index{DetectCylinderNode@{DetectCylinderNode}!getYawFromPose@{getYawFromPose}}
+\index{getYawFromPose@{getYawFromPose}!DetectCylinderNode@{DetectCylinderNode}}
+\doxysubsubsection{\texorpdfstring{getYawFromPose()}{getYawFromPose()}}
+{\footnotesize\ttfamily double Detect\+Cylinder\+Node\+::get\+Yaw\+From\+Pose (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::msg\+::\+Pose \&}]{pose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Gets the Yaw from the Pose of the robot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pose} & The pose of the robot. Retrieved from the Odometry data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted Yaw. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDetectCylinderNode_ab18199cbf2962ce09cbab35ee13e709b}\label{classDetectCylinderNode_ab18199cbf2962ce09cbab35ee13e709b}} 
+\index{DetectCylinderNode@{DetectCylinderNode}!laserCallback@{laserCallback}}
+\index{laserCallback@{laserCallback}!DetectCylinderNode@{DetectCylinderNode}}
+\doxysubsubsection{\texorpdfstring{laserCallback()}{laserCallback()}}
+{\footnotesize\ttfamily void Detect\+Cylinder\+Node\+::laser\+Callback (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::msg\+::\+Laser\+Scan\+::\+Shared\+Ptr}]{scan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Callback function for the Laser\+Scan subscriber. 
+
+Saves the laser\+Scan to a local copy if odometry has been recieved. This is done to ensure that the laserscan and the odometry information are synced up. \mbox{\Hypertarget{classDetectCylinderNode_a73039b036b748bbb994a57251cf5820c}\label{classDetectCylinderNode_a73039b036b748bbb994a57251cf5820c}} 
+\index{DetectCylinderNode@{DetectCylinderNode}!odomCallback@{odomCallback}}
+\index{odomCallback@{odomCallback}!DetectCylinderNode@{DetectCylinderNode}}
+\doxysubsubsection{\texorpdfstring{odomCallback()}{odomCallback()}}
+{\footnotesize\ttfamily void Detect\+Cylinder\+Node\+::odom\+Callback (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::msg\+::\+Odometry\+::\+Shared\+Ptr}]{odom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Callback function for the Odometry subscriber. 
+
+Saves the odometry to a local copy if a local copy doesn\textquotesingle{}t exist. This is done to ensure that the laserscan and the odometry information are synced up. \mbox{\Hypertarget{classDetectCylinderNode_a3cb053b4f23cc48d8ef64386558195a3}\label{classDetectCylinderNode_a3cb053b4f23cc48d8ef64386558195a3}} 
+\index{DetectCylinderNode@{DetectCylinderNode}!polarToCartesian@{polarToCartesian}}
+\index{polarToCartesian@{polarToCartesian}!DetectCylinderNode@{DetectCylinderNode}}
+\doxysubsubsection{\texorpdfstring{polarToCartesian()}{polarToCartesian()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::msg\+::\+Point Detect\+Cylinder\+Node\+::polar\+To\+Cartesian (\begin{DoxyParamCaption}\item[{double}]{range,  }\item[{double}]{yaw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Convert the polar coordinates to cartesian coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em range} & The range scan. \\
+\hline
+{\em yaw} & The angle of the robot.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The coverted coordinates as a Point. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

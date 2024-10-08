@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: DetectCylinderNode Class Reference</title>
+<title>Sprint 3: DetectCylinderNode Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Sprint 3
    </div>
+   <div id="projectbrief">Cylinder Detection</div>
   </td>
  </tr>
  </tbody>
@@ -62,6 +63,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classDetectCylinderNode-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">DetectCylinderNode Class Reference</div>  </div>
@@ -85,6 +88,345 @@ Collaboration diagram for DetectCylinderNode:</div>
 <area shape="rect" title=" " alt="" coords="31,5,133,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab18199cbf2962ce09cbab35ee13e709b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#ab18199cbf2962ce09cbab35ee13e709b">laserCallback</a> (const sensor_msgs::msg::LaserScan::SharedPtr scan)</td></tr>
+<tr class="memdesc:ab18199cbf2962ce09cbab35ee13e709b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for the LaserScan subscriber.  <a href="classDetectCylinderNode.html#ab18199cbf2962ce09cbab35ee13e709b">More...</a><br /></td></tr>
+<tr class="separator:ab18199cbf2962ce09cbab35ee13e709b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73039b036b748bbb994a57251cf5820c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#a73039b036b748bbb994a57251cf5820c">odomCallback</a> (const nav_msgs::msg::Odometry::SharedPtr odom)</td></tr>
+<tr class="memdesc:a73039b036b748bbb994a57251cf5820c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for the Odometry subscriber.  <a href="classDetectCylinderNode.html#a73039b036b748bbb994a57251cf5820c">More...</a><br /></td></tr>
+<tr class="separator:a73039b036b748bbb994a57251cf5820c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20af681202ec12cadd6aae7e4c596a4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#a20af681202ec12cadd6aae7e4c596a4b">filterScan</a> ()</td></tr>
+<tr class="separator:a20af681202ec12cadd6aae7e4c596a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fcda8323b5d6c402ec00ab78d39b07f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#a9fcda8323b5d6c402ec00ab78d39b07f">detectObjects</a> ()</td></tr>
+<tr class="memdesc:a9fcda8323b5d6c402ec00ab78d39b07f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look through the valid points for valid objects.  <a href="classDetectCylinderNode.html#a9fcda8323b5d6c402ec00ab78d39b07f">More...</a><br /></td></tr>
+<tr class="separator:a9fcda8323b5d6c402ec00ab78d39b07f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafaec9f30263005411ca721fbcb8bbe5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#aafaec9f30263005411ca721fbcb8bbe5">detectCylinder</a> ()</td></tr>
+<tr class="memdesc:aafaec9f30263005411ca721fbcb8bbe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detects the Cylinder from the vector of found objects.  <a href="classDetectCylinderNode.html#aafaec9f30263005411ca721fbcb8bbe5">More...</a><br /></td></tr>
+<tr class="separator:aafaec9f30263005411ca721fbcb8bbe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cb053b4f23cc48d8ef64386558195a3"><td class="memItemLeft" align="right" valign="top">geometry_msgs::msg::Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#a3cb053b4f23cc48d8ef64386558195a3">polarToCartesian</a> (double range, double yaw)</td></tr>
+<tr class="memdesc:a3cb053b4f23cc48d8ef64386558195a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the polar coordinates to cartesian coordinates.  <a href="classDetectCylinderNode.html#a3cb053b4f23cc48d8ef64386558195a3">More...</a><br /></td></tr>
+<tr class="separator:a3cb053b4f23cc48d8ef64386558195a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adacdf43f4c7ef6beeecb0061fab13fd6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#adacdf43f4c7ef6beeecb0061fab13fd6">getYawFromPose</a> (const geometry_msgs::msg::Pose &amp;pose)</td></tr>
+<tr class="memdesc:adacdf43f4c7ef6beeecb0061fab13fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the Yaw from the Pose of the robot.  <a href="classDetectCylinderNode.html#adacdf43f4c7ef6beeecb0061fab13fd6">More...</a><br /></td></tr>
+<tr class="separator:adacdf43f4c7ef6beeecb0061fab13fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac69c5311f7635136b9ca6eeb3f7e1592"><td class="memItemLeft" align="right" valign="top">geometry_msgs::msg::Pose&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#ac69c5311f7635136b9ca6eeb3f7e1592">getOdometry</a> ()</td></tr>
+<tr class="memdesc:ac69c5311f7635136b9ca6eeb3f7e1592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the Odometry from the locally stored variable.  <a href="classDetectCylinderNode.html#ac69c5311f7635136b9ca6eeb3f7e1592">More...</a><br /></td></tr>
+<tr class="separator:ac69c5311f7635136b9ca6eeb3f7e1592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af22ee1842019af06decaa8ff30db6525"><td class="memItemLeft" align="right" valign="top"><a id="af22ee1842019af06decaa8ff30db6525"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>publishCylinderMarker</b> ()</td></tr>
+<tr class="separator:af22ee1842019af06decaa8ff30db6525"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a511726c566ac9a8150f221a7ecf333a3"><td class="memItemLeft" align="right" valign="top"><a id="a511726c566ac9a8150f221a7ecf333a3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>publishDetectionMarker</b> (float detected_x, float detected_y)</td></tr>
+<tr class="separator:a511726c566ac9a8150f221a7ecf333a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a77017dca8645b36e8b8837bc46c2078a"><td class="memItemLeft" align="right" valign="top"><a id="a77017dca8645b36e8b8837bc46c2078a"></a>
+rclcpp::Subscription&lt; sensor_msgs::msg::LaserScan &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#a77017dca8645b36e8b8837bc46c2078a">laser_sub_</a></td></tr>
+<tr class="memdesc:a77017dca8645b36e8b8837bc46c2078a"><td class="mdescLeft">&#160;</td><td class="mdescRight">LaserScan subscriber. <br /></td></tr>
+<tr class="separator:a77017dca8645b36e8b8837bc46c2078a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c71df9be1f7bcbb49bb87242e39102"><td class="memItemLeft" align="right" valign="top"><a id="a70c71df9be1f7bcbb49bb87242e39102"></a>
+rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#a70c71df9be1f7bcbb49bb87242e39102">odom_sub_</a></td></tr>
+<tr class="memdesc:a70c71df9be1f7bcbb49bb87242e39102"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odometry subscriber. <br /></td></tr>
+<tr class="separator:a70c71df9be1f7bcbb49bb87242e39102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a641b7870712aa15dd3b9cbc6cba5e940"><td class="memItemLeft" align="right" valign="top"><a id="a641b7870712aa15dd3b9cbc6cba5e940"></a>
+rclcpp::Publisher&lt; visualization_msgs::msg::Marker &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#a641b7870712aa15dd3b9cbc6cba5e940">cylinder_pub_</a></td></tr>
+<tr class="memdesc:a641b7870712aa15dd3b9cbc6cba5e940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cylinder marker publisher. <br /></td></tr>
+<tr class="separator:a641b7870712aa15dd3b9cbc6cba5e940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a747ea5ea744566aa44a51ea854876a8f"><td class="memItemLeft" align="right" valign="top"><a id="a747ea5ea744566aa44a51ea854876a8f"></a>
+rclcpp::Publisher&lt; visualization_msgs::msg::Marker &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#a747ea5ea744566aa44a51ea854876a8f">detection_pub_</a></td></tr>
+<tr class="memdesc:a747ea5ea744566aa44a51ea854876a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detection marker publisher. <br /></td></tr>
+<tr class="separator:a747ea5ea744566aa44a51ea854876a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc918dffc76451766ad2a42014a008dd"><td class="memItemLeft" align="right" valign="top"><a id="abc918dffc76451766ad2a42014a008dd"></a>
+sensor_msgs::msg::LaserScan&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#abc918dffc76451766ad2a42014a008dd">laserScan_</a></td></tr>
+<tr class="memdesc:abc918dffc76451766ad2a42014a008dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">[sensor_msgs::msg::LaserScan] Local copy of laserscan. <br /></td></tr>
+<tr class="separator:abc918dffc76451766ad2a42014a008dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a4217c169f318a88014bec1df1067d3"><td class="memItemLeft" align="right" valign="top"><a id="a9a4217c169f318a88014bec1df1067d3"></a>
+geometry_msgs::msg::Pose&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#a9a4217c169f318a88014bec1df1067d3">odometry_</a></td></tr>
+<tr class="memdesc:a9a4217c169f318a88014bec1df1067d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">[geometry_msgs::msg::Pose] Local copy of Odometry. <br /></td></tr>
+<tr class="separator:a9a4217c169f318a88014bec1df1067d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaa98c93d4a9656cd768ed54585ba702"><td class="memItemLeft" align="right" valign="top"><a id="abaa98c93d4a9656cd768ed54585ba702"></a>
+std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#abaa98c93d4a9656cd768ed54585ba702">validRanges_</a></td></tr>
+<tr class="memdesc:abaa98c93d4a9656cd768ed54585ba702"><td class="mdescLeft">&#160;</td><td class="mdescRight">[std::vector&lt;float&gt;] A vector of valid ranges from the scan data. <br /></td></tr>
+<tr class="separator:abaa98c93d4a9656cd768ed54585ba702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6e7d8865bc2915282fb48a5073d221c"><td class="memItemLeft" align="right" valign="top"><a id="af6e7d8865bc2915282fb48a5073d221c"></a>
+std::vector&lt; std::vector&lt; geometry_msgs::msg::Point &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>detectedObjects_</b></td></tr>
+<tr class="separator:af6e7d8865bc2915282fb48a5073d221c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fdcb12d2d82787ba6298a09847dc6d0"><td class="memItemLeft" align="right" valign="top"><a id="a1fdcb12d2d82787ba6298a09847dc6d0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#a1fdcb12d2d82787ba6298a09847dc6d0">recievedOdometry_</a> = false</td></tr>
+<tr class="memdesc:a1fdcb12d2d82787ba6298a09847dc6d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">[bool] Indicates if the odometry information has been recieved. <br /></td></tr>
+<tr class="separator:a1fdcb12d2d82787ba6298a09847dc6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b934a717a4264fa86f7319a9a021281"><td class="memItemLeft" align="right" valign="top"><a id="a6b934a717a4264fa86f7319a9a021281"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetectCylinderNode.html#a6b934a717a4264fa86f7319a9a021281">cylinderDetected_</a> = false</td></tr>
+<tr class="memdesc:a6b934a717a4264fa86f7319a9a021281"><td class="mdescLeft">&#160;</td><td class="mdescRight">[bool] Indicates if the cylinder has been detected. <br /></td></tr>
+<tr class="separator:a6b934a717a4264fa86f7319a9a021281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adee1d97900cef1e49f3e400659063cbe"><td class="memItemLeft" align="right" valign="top"><a id="adee1d97900cef1e49f3e400659063cbe"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>cylinderRadius_</b></td></tr>
+<tr class="separator:adee1d97900cef1e49f3e400659063cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30b455fc7fe721d65eff37481b70701e"><td class="memItemLeft" align="right" valign="top"><a id="a30b455fc7fe721d65eff37481b70701e"></a>
+geometry_msgs::msg::Point&#160;</td><td class="memItemRight" valign="bottom"><b>cylinderPosition_</b></td></tr>
+<tr class="separator:a30b455fc7fe721d65eff37481b70701e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aafaec9f30263005411ca721fbcb8bbe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafaec9f30263005411ca721fbcb8bbe5">&#9670;&nbsp;</a></span>detectCylinder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DetectCylinderNode::detectCylinder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Detects the Cylinder from the vector of found objects. </p>
+<p>Tolerances for what is considered a cylinder are set by the user. (Magic numbers). </p>
+
+</div>
+</div>
+<a id="a9fcda8323b5d6c402ec00ab78d39b07f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fcda8323b5d6c402ec00ab78d39b07f">&#9670;&nbsp;</a></span>detectObjects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DetectCylinderNode::detectObjects </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Look through the valid points for valid objects. </p>
+<p>Valid objects are a set of points that are connected with a distance within the tolerance range. </p>
+<p>&lt; Converted yaw from provided pose.</p>
+<p>&lt; Points that make up objects which may be the cylinder.</p>
+
+</div>
+</div>
+<a id="a20af681202ec12cadd6aae7e4c596a4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20af681202ec12cadd6aae7e4c596a4b">&#9670;&nbsp;</a></span>filterScan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DetectCylinderNode::filterScan </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Filter the scan. It should:</p><ul>
+<li>Be Finite.</li>
+<li>Be a number.</li>
+<li>Be less than the max range amount.</li>
+<li>Be greater than the min range amount.</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>Valid points in the validRanges_ vector. </dd></dl>
+
+</div>
+</div>
+<a id="ac69c5311f7635136b9ca6eeb3f7e1592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac69c5311f7635136b9ca6eeb3f7e1592">&#9670;&nbsp;</a></span>getOdometry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">geometry_msgs::msg::Pose DetectCylinderNode::getOdometry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the Odometry from the locally stored variable. </p>
+<dl class="section return"><dt>Returns</dt><dd>Odometry </dd></dl>
+
+</div>
+</div>
+<a id="adacdf43f4c7ef6beeecb0061fab13fd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adacdf43f4c7ef6beeecb0061fab13fd6">&#9670;&nbsp;</a></span>getYawFromPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double DetectCylinderNode::getYawFromPose </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::msg::Pose &amp;&#160;</td>
+          <td class="paramname"><em>pose</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the Yaw from the Pose of the robot. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pose</td><td>The pose of the robot. Retrieved from the Odometry data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted Yaw. </dd></dl>
+
+</div>
+</div>
+<a id="ab18199cbf2962ce09cbab35ee13e709b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab18199cbf2962ce09cbab35ee13e709b">&#9670;&nbsp;</a></span>laserCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DetectCylinderNode::laserCallback </td>
+          <td>(</td>
+          <td class="paramtype">const sensor_msgs::msg::LaserScan::SharedPtr&#160;</td>
+          <td class="paramname"><em>scan</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback function for the LaserScan subscriber. </p>
+<p>Saves the laserScan to a local copy if odometry has been recieved. This is done to ensure that the laserscan and the odometry information are synced up. </p>
+
+</div>
+</div>
+<a id="a73039b036b748bbb994a57251cf5820c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73039b036b748bbb994a57251cf5820c">&#9670;&nbsp;</a></span>odomCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DetectCylinderNode::odomCallback </td>
+          <td>(</td>
+          <td class="paramtype">const nav_msgs::msg::Odometry::SharedPtr&#160;</td>
+          <td class="paramname"><em>odom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback function for the Odometry subscriber. </p>
+<p>Saves the odometry to a local copy if a local copy doesn't exist. This is done to ensure that the laserscan and the odometry information are synced up. </p>
+
+</div>
+</div>
+<a id="a3cb053b4f23cc48d8ef64386558195a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cb053b4f23cc48d8ef64386558195a3">&#9670;&nbsp;</a></span>polarToCartesian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">geometry_msgs::msg::Point DetectCylinderNode::polarToCartesian </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>yaw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert the polar coordinates to cartesian coordinates. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">range</td><td>The range scan. </td></tr>
+    <tr><td class="paramname">yaw</td><td>The angle of the robot.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The coverted coordinates as a Point. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>detect_cylinder.cpp</li>
 </ul>

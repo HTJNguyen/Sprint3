@@ -1,0 +1,23 @@
+/*!
+
+*/
+
+/*!
+@mainpage Sprint 3 - Cylinder Detectiion
+
+@htmlinclude manifest.html
+
+@section summary_sec Summary of Executable Code
+The code will do the following:
+1. spawn_cylinder.cpp will summon in the cylinder at a specified location.
+2. detect_cylinder.cpp will attempt to detect the cylinder.
+
+@section detect_sec Detection Method
+The executable will first read in laser scan values and will filter out 'bad' readings.
+The next stage invovles detecting which have the potential to be a cylinder.
+The final stage goes through a vector of detected objects and determines the best match.
+
+@n By Huu Thanh Jack Nguyen
+@n huu.t.nguyen@student.uts.edu.au
+
+*/
